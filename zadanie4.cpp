@@ -21,9 +21,9 @@ int main() {
     std::cout << std::boolalpha;
 
     std::cout << "Email valid: " << validateEmail("ivan@example.com") << "\n";
-    std::cout << "Email invalid" << validateEmail("invalid@") << "\n";
-    std::cout << "Phone valid" << validateEmail("+7 (999) 123-45-67") << "\n";
-    std::cout << "URL valid" << validateEmail("https://example.com") << "\n";
+    std::cout << "Email invalid: " << validateEmail("invalid@") << "\n";
+    std::cout << "Phone valid: " << validateEmail("+7 (999) 123-45-67") << "\n";
+    std::cout << "URL valid: " << validateEmail("https://example.com") << "\n";
 
     return 0;
 }
