@@ -3,18 +3,23 @@
 #include <algorithm>
 #include <cctype>
 
+// Функция проверки, является ли строка палиндромом
 bool isPolindrome (const std::string& text){
     //Очистка: только буквы и цифры нижний регистр
     std::string cleaned;
+
+        // Очищаем строку: оставляем только буквы и цифры, приводим к нижнему регистру
     for(char c : text) {
         if (std::isalnum(static_cast<unsigned char>(c))) {
             cleaned += std::tolower(static_cast<unsigned char>(c));
         }
     }
 
-    // Сравнение с реверсом
+    // Создаем копию очищенной строки и переворачиваем её
     std::string reversed = cleaned;
     std::reverse(reversed.begin(), reversed.end());
+
+    // Сравниваем очищенную строку с перевернутой
     return cleaned == reversed;
 }
 
